@@ -3,6 +3,35 @@ h1 {
   font-weight: 500;
   color: #3B3B3B; }
 
+h2 {
+  font-size: 1.875em;
+  font-weight: 500;
+  color: #3B3B3B; }
+
+h3 {
+  font-size: 1.50em;
+  font-weight: 500;
+  color: #3B3B3B; }
+
+h4 {
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #3B3B3B; }
+
+h5 {
+  font-size: 1em;
+  font-weight: 300;
+  color: #3B3B3B; }
+
+h6 {
+  font-size: .850em;
+  font-weight: 300;
+  color: #3B3B3B; }
+
+p {
+  font-size: 16px;
+  color: #3B3B3B; }
+
 .h1-aqua-banner {
   color: #fff;
   background: #57C3C2;
@@ -122,14 +151,31 @@ h1 {
   margin-left: -15px;
   margin-right: 20%; }
 
-h2 {
-  font-size: 1.875em;
-  font-weight: 500;
-  color: #3B3B3B; }
+.p-lime-banner {
+  color: #3B3B3B;
+  background: #CCD67F;
+  padding: 10px 15px;
+  margin-left: 0;
+  margin-right: 0; }
 
-h3 {
-  font-size: 1.50em;
-  font-weight: 500; }
+.p-aqua-banner {
+  color: #fff;
+  background: #57C3C2;
+  padding: 10px 15px;
+  margin-left: 0;
+  margin-right: 0; }
+
+.p-coral-banner {
+  color: #fff;
+  background: #F26432;
+  padding: 10px 15px;
+  margin-left: 0;
+  margin-right: 0; }
+
+.error-box {
+  background: #F26432;
+  width: 100%;
+  padding: 20px 20px; }
 
 hr {
   color: #EFEFEF;
