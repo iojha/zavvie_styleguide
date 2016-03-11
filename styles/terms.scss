@@ -1,0 +1,44 @@
+//Terms of Use Page
+
+#terms {
+	font-family: $default-font-family;
+	font-size: 14px;
+}
+
+#terms p {
+	margin-left: 10px;
+	text-indent: 25px;
+	margin-bottom: 15px;
+}
+
+#terms li {
+	margin-left: 60px;
+}
+
+#terms h3 {
+
+	position: relative;
+	background-color: $aqua;
+	width: auto;
+	text-align: center;
+	color: $white;
+	font-family: $bold;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+	padding: 12px 10px 10px 10px;
+	
+}
+
+#terms h5 {
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: $lime;
+	width: auto;
+	text-align: left;
+	color: $white;
+	font-family: $medium;
+	font-size: 18px;
+	letter-spacing: 1.5px;
+	padding: 12px 10px 10px 10px;
+}

@@ -1,0 +1,72 @@
+//About Us Page
+#about {
+	font-family: $default-font-family;
+	font-size: 14px;
+}
+
+#about p {
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-bottom: 15px;
+}
+
+#about li {
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-bottom: 15px;
+}
+
+#about h3 {
+	position: relative;
+	background-color: $aqua;
+	width: auto;
+	text-align: center;
+	color: $white;
+	font-family: $medium;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+	padding: 12px 10px 10px 10px;
+	
+}
+
+#about h5:nth-of-type(1) {
+	position: relative;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	width: auto;
+	text-align: center;
+	font-family: $thin;
+	font-size: 18px;
+	letter-spacing: 2.5px;
+	
+}
+
+#about h4 {
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	background-color: $lime;
+	width: auto;
+	text-align: left;
+	color: $white;
+	font-family: $medium;
+	font-size: 18px;
+	letter-spacing: 1.5px;
+	padding: 12px 10px 10px 10px;
+	
+}
+
+#about h5:nth-of-type(2) {
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	background-color: $lime;
+	width: auto;
+	text-align: left;
+	color: $white;
+	font-family: $medium;
+	font-size: 18px;
+	letter-spacing: 1.5px;
+	padding: 12px 10px 10px 10px;
+	
+}

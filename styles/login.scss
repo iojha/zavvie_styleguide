@@ -1,0 +1,56 @@
+//Login Page
+
+.login {
+
+	padding-left: 30px;
+	padding-right: 30px;
+	border: 1px solid $grey;
+	border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.login a {
+	margin-left: 35px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.login form {
+	padding: 20px;
+}
+
+.login h1 {
+	position: relative;
+	background-color: $navy;
+	text-align: center;
+	color: $white;
+	font-family: $medium;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+	margin-top: -30px;
+	margin-left: -31px;
+	margin-right: -31px;
+	padding: 20px 20px 20px 20px;
+	  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+	
+}
+
+
+.login .input-field {
+	margin-top: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+
+
+}
+
+.login .input-field label {
+	padding-left: 40px;
+	padding-right: 40px;
+
+
+}
+.login .btn {
+	margin-top: 40px;
+}

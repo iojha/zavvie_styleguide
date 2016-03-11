@@ -1,0 +1,111 @@
+//bam
+#bam-input {
+	background-color: #fff;
+	margin-left: 12px;
+	margin-top: 25px;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 66%;
+}
+.bam-control-box {
+  position:fixed;
+  bottom:-20px;
+  left:0;
+  width:100%;
+  z-index:9;
+}
+#bam{
+  position: fixed !important;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 94px);
+  background-color: antiquewhite;
+  z-index: 8;
+  #sidebar{
+    position: fixed;
+    background-color: rgba(255, 250, 250, 0.6);
+    z-index: 16;
+    border-radius: 4px;
+    #header{
+      background-color: lightgreen;
+      text-align: center;
+      line-height: 150%;
+      font-weight: 600;
+      color: darkslategrey;
+      margin: 0;
+      cursor: pointer;
+      font-size: 2.4vw;
+    }
+  }
+  #sidebar{
+    #top{
+      .col{
+        padding: 0;
+      }
+      div#search{
+        padding-left: 10px;
+        padding-right: 10px;
+        input#search{
+          width: calc(100% - 32px);
+        }
+      }
+    }
+    #content{
+      text-align: center;
+      background-color: rgba(255, 250, 250, 0.7);
+      [id ^= "column"]{
+        *{
+          border-bottom: 1px solid darkslateblue;
+          text-shadow: 1px 1px transparent;
+          font-weight: 600;
+          display: block;
+          margin: 3px 0 7px 0;
+          background-color: rgba(255, 248, 220, 0.6);
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+  #sidebar.tall{
+    top: 5%;
+    left: 70%;
+    width: 25%;
+    height: 90%;
+    .col{
+      width: 100%;
+    }
+    div#search{
+      padding-top: 10px;
+    }
+    #content{
+      [id ^= "column"]:not(:last-child){
+        margin-bottom: 10%;
+      }
+    }
+  }
+  #sidebar.tall.minimized{
+    height: 35px;
+  }
+  #sidebar.wide{
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 25%;
+  }
+  #sidebar.wide.minimized{
+    height: 35px;
+    width: 36%;
+  }
+  div#articles{
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    background-color: cornsilk;
+    z-index: 17;
+    border-radius: 4px;
+  }
+}
+

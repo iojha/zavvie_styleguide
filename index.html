@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/css/styles/our.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+    <style>
+    section {
+        padding: 50px 0;
+    }
+    
+    .border-box {
+        background: #fff;
+        border: 1px solid grey;
+        border-radius: 0px !important;
+    }
+    
+    .code-css {
+        color: green;
+        font-size: .75em;
+        line-height: auto;
+    }
+
+    .code-css:before {
+        content: "SCSS";
+        font-size: .850em;
+        color: grey;
+        float: right;
+    }
+
+    .code-html {
+        color: green;
+        font-size: .75em;
+        line-height: auto;
+    }
+
+    .code-html:before {
+        content: "HTML";
+        font-size: .850em;
+        color: grey;
+        float: right;
+    }
+
+    .padding-top{
+        padding-top: 20px;
+    }
+
+    .nav-container {
+        background:#57C3C2;
+        color: #fff;
+        padding-top: 40px;
+        height: 100%;
+        display: block;
+        position:fixed;
+        z-index: 999;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+
+    .nav>li>a{
+    color: #fff;
+}
+
+    .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #00c3c2
+}
+
+    .main-container {
+    position: relative;
+    display: block;
+}
+
+/* Removing padding on container*/
+
+    .container-fluid {
+    padding-right: 0;
+    padding-left: 0; 
+    }
+
+/*Adding padding to font awesome icons*/
+i {
+    padding: 2px 10px;
+}
+
+    </style>
+</head>
+
+<body>
+    <!--start container-->
+    <div class="container-fluid">
+
+    <!--Begin side bar-->
+
+    <div class="col-xs-2 nav-container padding-top">
+    <div class="col-xs-12">
+       <img class="brandimg" src="https://s3-us-west-2.amazonaws.com/stage-zavvie-static/bullseye_w.svg" width="150px">
+    </div> 
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#typography" style="clear:both"><i class="fa fa-paragraph"></i>Typography <span class="sr-only">(current)</span></a></li>
+            <li><a href="#button"><i class="fa fa-link"></i>Buttons/Links</a></li>
+            <li><a href="#error"><i class="fa fa-thumbs-down"></i>Error/Success</a></li>
+          </ul>
+        </div>
+
+    <!--End side bar-->
+
+        <!--begin typography section-->
+        <div class="col-xs-10 col-xs-offset-2 main-container">
+        <section id="typography">
+                <h1 class="h1-aqua-banner">Typography</h1>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="col-xs-12 border-box">
+                        <h3 class="h3-aqua-banner-box">General Guidelines</h3>
+                        <p>
+                            <ul>
+                                <li> All fonts are in em. They size relative to the $base-font-size listed in body.</li>
+                                <li> For media queries, just change the $base-font-size and all the font sizes should change accordingly.</li>
+                                <li> Don't use $navy for regular text. Navy is for all linked font, and will confuse the user if used in non-linked text.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h1 class="padding-top">This is the h1</h1>
+                    <pre><code class="code-css">
+h1 {
+    font-size: 2.250em;
+    font-weight: 500;
+    color: $really-dark-grey;
+    }
+                    </code></pre>
+
+                    <h1 class="h1-lime-banner" style="clear:both">h1 on lime banner</h1>
+                    <h1 class="h1-aqua-banner">h1 on aqua banner</h1>
+                    <p>
+                    <ul>
+                    <li>These banners are made using the following Sass mixin in the first code box below.</li>
+                    <li>Use the class <code>h1-lime-banner</code>, in the markup. Replace "lime" with aqua for the aqua background color.</li>
+                    </ul>
+                    </p>
+                    <pre><code class="code-css">
+@mixin banner($color, $background, $fontsize, $padding, $margin-left, $margin-right) {
+  color: $color;
+  background: $background;
+  padding: $padding;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+                    </code></pre>
+                    
+                    <pre><code class="code-css">
+.h1-lime-banner {
+  @include banner(#fff, $lime, h1, $banner-text-padding, 0, 0);
+}
+                    </code></pre>
+
+                    <hr>
+                    <h2 class="padding-top">This is the h2</h2>
+                    <pre><code class="code-css">
+h2 {
+  font-size: 1.875em;
+  font-weight: 500;
+  color: $really-dark-grey;
+}
+                    </code></pre>
+                    <h2 class="h2-lime-banner">h2 on lime banner</h2>
+                    <h2 class="h2-aqua-banner">h2 on aqua banner</h2>
+                    <p>
+                    <ul>
+                    <li>Use the class <code>h2-lime-banner</code>, in the markup. Replace "lime" with aqua for the aqua background color.</li></ul></p>
+                    <pre><code class="code-css">
+.h2-lime-banner {
+  @include banner(#fff, $lime, h2, $banner-text-padding, 0, 0);
+}
+                    </code></pre>
+                    <hr>
+                    <h3 class="padding-top">This is the h3</h3>
+                    <pre><code class="code-css">
+
+h3{
+  font-size: 1.50em;
+  font-weight: 500;
+}
+                    </code></pre>
+
+                    <h3 class="h3-lime-banner">h3 on lime banner</h3>
+                    <h3 class="h3-aqua-banner">h3 on aqua banner</h3>
+                    <h3 class="h3-coral-banner">h3 on aqua banner</h3>
+                    <p>
+                    <ul><li>Use the class <code>h3-lime-banner</code>, in the markup. Replace "lime" with "aqua" or "coral" for the other background colors.</li>
+                    <li>Use coral for error message headings and lime for success message headings.</li>
+                    </ul>
+                    </p> 
+                    <pre><code class="code-css">
+.h3-lime-banner {
+  @include banner(#fff, $lime, h3, $banner-text-padding, 0, 0);
+}
+                    </code></pre>
+                    <hr>
+                    <h4 class="padding-top">This is the h4</h4>
+                     <pre><code class="code-css">
+
+h4{
+  font-size: 1.50em;
+  font-weight: 500;
+}
+                    </code></pre>
+                    <h4 class="h4-lime-banner">This is the h4</h4>
+                    <h4 class="h4-aqua-banner">This is the h4</h4>
+                    <p>
+                    <ul><li>Use the class <code>h4-lime-banner</code>, in the markup. Replace "lime" with "aqua" or "coral" for the other background colors.</li>
+                    </ul>
+                    </p> 
+
+                    <pre><code class="code-css">
+.h4-lime-banner {
+  @include banner(#fff, $lime, h4, $banner-text-padding, 0, 0);
+}
+                    </code></pre>
+                    <hr>
+                    <h5 class="padding-top">This is h5</h5>
+                    <hr>
+                    <h6 class="padding-top">This is the h6</h6>
+                    <hr>
+                    <p class="padding-top">This is p -- paragraph text. 
+                    Photo booth chambray actually disrupt. Knausgaard artisan lomo, tofu marfa celiac pickled mumblecore messenger bag pork belly. Mustache yr paleo literally master cleanse food truck, readymade PBR&B tilde leggings hashtag. Pop-up keytar stumptown next level seitan bitters echo park scenester truffaut intelligentsia, fingerstache XOXO ennui.</p>
+                    <pre><code class="code-css">
+p{
+    font-size: $base-font-size;
+    color: $really-dark-grey;
+}
+                    </code></pre>
+
+                    <p class="padding-top p-lime-banner">USE THIS FOR SUCCESS MESSAGES. 
+                    Photo booth chambray actually disrupt. Knausgaard artisan lomo, tofu marfa celiac pickled mumblecore messenger bag pork belly. Mustache yr paleo literally master cleanse food truck, readymade PBR&B tilde leggings hashtag. Pop-up keytar stumptown next level seitan bitters echo park scenester truffaut intelligentsia, fingerstache XOXO ennui.</p>
+
+                    <p>
+                    <ul><li>Use the class <code>p-lime-banner</code>, in the markup. Replace "lime" with "coral" for the error messages.</li>
+                    </ul>
+                    </p> 
+                    <pre><code class="code-css">
+.p-lime-banner {
+  @include banner($really-dark-grey, $lime, p, $banner-text-padding, 0, 0);
+}
+                    </code></pre>
+
+                    <p class="padding-top p-coral-banner">USE THIS FOR ERROR MESSAGES. 
+                    Photo booth chambray actually disrupt. Knausgaard artisan lomo, tofu marfa celiac pickled mumblecore messenger bag pork belly. Mustache yr paleo literally master cleanse food truck, readymade PBR&B tilde leggings hashtag. Pop-up keytar stumptown next level seitan bitters echo park scenester truffaut intelligentsia, fingerstache XOXO ennui.</p>
+                    <hr>
+                    <p class="padding-top"><a href="#">This is a link. It lightens up by 10% on hover</a></p>
+                </div>
+        </section>
+        <!--End typography section-->
+
+
+
+        <!--Begin buttons section-->
+        <section id="buttons">
+            <div class="col-xs-12" id="button">
+                <h1 class="h1-aqua-banner">Buttons and links</h1>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="col-xs-12 border-box">
+                        <h3 class="h3-aqua-banner-box">General Guidelines</h3>
+                        <p>
+                            <ul>
+                                <li><b>Buttons</b>: Use for cases where user actions affect the website’s back-end or front-end. For example -- sign ups, creating new posts, making comments.
+                                    <ul>
+                                        <li>All buttons darken by 10% on hover.</li>
+                                        <li>Use coral for all primary actions such as submits.</li>
+                                        <li>Use aqua for all secondary actions.</li>
+                                        <li>Use lime button for all tertiary actions (only if coral and aqua have already been used)</li>
+                                    </ul>
+                                </li>
+                                <li><b>Links (hrefs)</b>: Use for cases where user actions won’t affect the website at all --when the user is just being moved around in the site, where they are basically just “clicking and viewing”.</li>
+                                <li>All buttons darken by 10% on hover.</li>
+                                <li>Use coral for all submits.</li>
+                                <li>Use aqua for all others.</li>
+                                <li>Use lime button for ??</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h3 class="padding-top">Button Styles</h3>
+                    <h4>Hover over buttons to see hover state</h4>
+                    <h4>Large</h4>
+                    <button class="button-large-coral" href="#">Primary action</button>
+                    <button class="button-large-aqua" href="#">Secondary action</button>
+                    <button class="button-large-lime" href="#">Tertiary action</button>
+                    <hr>
+                    <h4 class="padding-top">Medium</h4>
+                    <button class="button-medium-coral" href="#">Primary action</button>
+                    <button class="button-medium-aqua" href="#">Secondary action</button>
+                    <button class="button-medium-lime" href="#">Tertiary action</button>
+                    <hr>
+                    <h4 class="padding-top">Small</h4>
+                    <button class="button-small-coral" href="#">Primary action</button>
+                    <button class="button-small-aqua" href="#">Secondary action</button>
+                    <button class="button-small-lime" href="#">Tertiary action</button>
+                    <code></code>
+                    <hr>
+                    <h4 class="padding-top">Disabled State</h4>
+                    <button disabled class="button-small-coral">Disabled button</button>
+                    <button disabled class="button-small-aqua">Disabled button</button>
+                    <button disabled class="button-small-lime">Disabled button</button>
+                    <hr>
+                    <h3 class="padding-top">Link Styles</h3>
+                    <p><a href="#">This is a link. It lightens up by 10% on hover</a></p>
+                    <pre><code class="code-css">
+a:hover {
+    color: lighten($navy, 20%);
+    text-decoration: none;
+}</code></pre>
+                    <hr>
+                </div>
+        </section>
+        <!--End Buttons Section-->
+
+        <!--Begin Error/Success Message Section-->
+        <section id="error">
+            <div class="col-xs-12" id="errors">
+                <h1 class="h1-aqua-banner">Errors</h1>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="col-xs-12 border-box">
+                        <h3 class="h3-aqua-banner-box">General Guidelines</h3>
+                        <p>
+                            <ul>
+                                <li>All 
+                                </li>
+                                <li></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h3 class="padding-top">Button Styles</h3>
+                        
+        </section>
+        <!--End div for 9 cols-->
+    <   /div>
+        <!--End Container-->
+    </div>
+
+        <!-- Bootstrap Core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+</body>
+
+</html>

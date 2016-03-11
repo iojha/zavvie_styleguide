@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/css/styles/our.css">
+
+    <style>
+    .main { 
+margin-top: 50px 
+}
+
+.search {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.search input {
+    height: 26px;
+    width: 100%;
+    padding: 0 0px 0 25px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.search input:focus {
+    outline: none;
+    border-color: #57c3ba;
+}
+
+.search input:focus + .results { display: block }
+
+.search .results {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e2e2e2;
+    border-radius: 0px;
+    background-color: #fff;
+}
+
+
+.search .results li { display: block }
+
+.search .results li:first-child { margin-top: -1px }
+
+.search .results li:first-child:before, .search .results li:first-child:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.search .results li:first-child:before {
+    border-bottom: 5px solid #e2e2e2;
+    top: -11px;
+}
+
+.search .results li:first-child:after {
+    border-bottom: 5px solid #e2e2e2;
+    top: -10px;
+}
+
+.search .results li:first-child:hover:before, .search .results li:first-child:hover:after { display: none }
+
+.search .results li:last-child { margin-bottom: -1px }
+
+.search .results a {
+    display: block;
+    position: relative;
+    margin: 0 -1px;
+    padding: 6px 40px 6px 10px;
+    color: #386099;
+    font-weight: 400;
+    border: 1px solid transparent;
+    border-radius: 1px;
+}
+
+.search .results a span { font-weight: 200 }
+
+.search .results a:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -9px;
+}
+
+.search .results a:hover {
+    text-decoration: none;
+    color: #57c3b8;
+}
+
+:-moz-placeholder {
+    color: #a7aabc;
+    font-weight: 200;
+}
+
+::-webkit-input-placeholder {
+    color: #a7aabc;
+    font-weight: 200;
+}
+
+.lt-ie9 .search input { line-height: 26px }
+    
+</style>
+</head>
+
+<body>
+
+<section class="main">
+   <form class="search" method="post">
+     <input type="text" name="q" placeholder="Search..." />
+     <ul class="results">
+       <li><a href="index.html">Search Result #1<br /><span>Description...</span></a></li>
+       <li><a href="index.html">Search Result #2<br /><span>Description...</span></a></li>
+      <li><a href="index.html">Search Result #3<br /><span>Description...</span></a></li>
+    <li><a href="index.html">Search Result #4</a></li>
+</ul>
+</form>
+
+</section>
+</body>
+

@@ -1,0 +1,435 @@
+//Colors
+$lime: #CCD67F;
+$aqua: #57C3C2;
+$coral: #F26432;
+$navy: #386099;
+$yellow: #F8D44B;
+$orange: #F6931E;
+$grey: #ADAEAF;
+$light-grey: #EFEFEF;
+$dark-grey: #6B6B6B;
+$really-dark-grey: #3B3B3B;
+$black: #171814;
+$white: #FFFFFF;
+$cream: #fbf4d9;
+
+
+//Font
+$base-font-size: 16px;
+$default-font-family: HelveticaNeue, "Helvetica", "Arial";
+$bold: HelveticaNeue-Bold;
+$thin: HelveticaNeue-Thin;
+$light: HelveticaNeue-Light;
+$ultralight: HelveticaNeue-UltraLight;
+$italic: HelveticaNeue-Italic;
+$medium: HelveticaNeue-Medium;
+$neue-black: HelveticaNeue-Black;
+$ultralightcondensed: HelveticaNeue-UltraLightCondensed;
+
+///////////////////////////////////////////////////////////// BEGIN -- ADDED by IO
+
+// Primary and Secondary Colors 
+$primary_green: $lime;
+$primary_blue: $aqua;
+$primary_coral: $coral;
+$secondary_navy: $navy;
+$secondary_yellow: $yellow;
+$secondary_orange: $orange;
+$secondary_cream: $cream;
+
+
+// Padding and Margins
+$banner-text-padding: 10px 15px;
+
+
+// Fonts
+//// Ems are relative to the $base-font-size in body. So, for responsiveness, media queries need 
+////to address the $base-font-size and all the rest of the font-size should resize accordingly
+
+h1 {
+  font-size: 2.250em;
+  font-weight: 500;
+  color: $really-dark-grey;
+}
+
+h2 {
+  font-size: 1.875em;
+  font-weight: 500;
+  color: $really-dark-grey;
+}
+
+h3{
+  font-size: 1.50em;
+  font-weight: 500;
+  color: $really-dark-grey;
+}
+
+h4{
+  font-size: 1.25em;
+  font-weight: 400;
+  color: $really-dark-grey;
+}
+
+h5{
+  font-size: 1em;
+  font-weight: 300;
+  color: $really-dark-grey;
+}
+
+h6{
+  font-size: .850em;
+  font-weight: 300;
+  color: $really-dark-grey;
+}
+
+p{
+  font-size: $base-font-size;
+  color: $really-dark-grey;
+}
+
+
+//Header mixins
+////This makes it easy to just call a heading banner and keep it consistent. You can always
+////create a new one by using @include headline(color, background, font-size, padding)
+
+
+@mixin banner($color, $background, $fontsize, $padding, $margin-left, $margin-right) {
+  color: $color;
+  background: $background;
+  padding: $padding;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+
+//h1 banner with background
+.h1-aqua-banner {
+  @include banner(#fff, $aqua, h1, $banner-text-padding, 0, 0);
+}
+
+.h1-lime-banner {
+  @include banner(#fff, $lime, h1, $banner-text-padding, 0, 0);
+}
+
+//h1 banner for box
+.h1-aqua-banner-box {
+  @include banner(#fff, $aqua, h1, $banner-text-padding, -15px, 20%);
+}
+
+.h1-lime-banner-box {
+  @include banner(#fff, $lime, h1, $banner-text-padding, -15px, 20%);
+}
+
+//h2 banner with background
+.h2-lime-banner {
+  @include banner(#fff, $lime, h2, $banner-text-padding, 0, 0);
+}
+
+.h2-aqua-banner {
+  @include banner(#fff, $aqua, h2, $banner-text-padding, 0, 0);
+}
+
+//h2 banner for box
+.h2-aqua-banner-box {
+  @include banner(#fff, $aqua, h2, $banner-text-padding, -15px, 20%);
+}
+
+.h2-lime-banner-box {
+  @include banner(#fff, $lime, h2, $banner-text-padding, -15px, 20%);
+}
+
+//h3 banner with background
+.h3-lime-banner {
+  @include banner(#fff, $lime, h3, $banner-text-padding, 0, 0);
+}
+
+.h3-aqua-banner {
+  @include banner(#fff, $aqua, h3, $banner-text-padding, 0, 0);
+}
+
+.h3-coral-banner {
+  @include banner(#fff, $coral, h3, $banner-text-padding, 0,0)
+}
+
+//h3 banner for box
+.h3-aqua-banner-box {
+  @include banner(#fff, $aqua, h3, $banner-text-padding, -15px, 20%);
+}
+
+.h3-lime-banner-box {
+  @include banner(#fff, $lime, h3, $banner-text-padding, -15px, 20%);
+}
+
+
+
+//h4 banner with background
+.h4-aqua-banner{
+  @include banner(#fff,$aqua, h4, $banner-text-padding, 0, 0);
+}
+
+.h4-lime-banner{
+  @include banner(#fff,$lime, h4, $banner-text-padding, 0, 0);
+}
+
+//h4 banner for box
+.h4-aqua-banner-box {
+  @include banner(#fff, $aqua, h4, $banner-text-padding, -15px, 20%);
+}
+
+.h4-lime-banner-box {
+  @include banner(#fff, $lime, h4, $banner-text-padding, -15px, 20%);
+}
+
+//paragraph text
+
+.p-lime-banner {
+   @include banner($really-dark-grey, $lime, p, $banner-text-padding, 0, 0);
+}
+
+.p-aqua-banner {
+  @include banner(#fff, $aqua, p, $banner-text-padding, 0,0);
+}
+
+.p-coral-banner {
+  @include banner(#fff, $coral, p, $banner-text-padding, 0,0);
+}
+
+
+//END -- ADDED BY IO
+
+/////////////////////////////////////////////////////////////
+
+hr {
+	color:$light-grey;
+	background-color:$light-grey;
+	border-color: $light-grey;
+}
+
+.logo {
+	width: 300px;
+  margin-top:5px;
+	padding-left: 40px;
+  padding-right: 40px;
+}
+
+//Collections
+.collection {
+  .collection-item {
+    color: $aqua;
+  }
+  a.collection-item {
+      color: $aqua;
+  }
+  a {
+      color: $aqua;
+  }
+}
+
+
+//FormFields
+
+.input-field label {
+	color: $grey;
+}
+.input-field input[type=text]:focus + label {
+	color: $aqua;
+}
+.input-field input[type=email]:focus + label {
+    color: $aqua;
+}
+.input-field input[type=password]:focus + label {
+    color: $aqua;
+}
+.input-field input[type=email]:focus + label {
+    color: $aqua;
+}
+.input-field input[type=password]:focus + label {
+    color: $aqua;
+}
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid $aqua;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=text].valid {
+     border-bottom: 1px solid $lime;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=text].invalid {
+     border-bottom: 1px solid $coral;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+
+.input-field input[type=email]:focus {
+     border-bottom: 1px solid $aqua;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=email].valid {
+     border-bottom: 1px solid $lime;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=email].invalid {
+     border-bottom: 1px solid $coral;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=password]:focus {
+     border-bottom: 1px solid $aqua;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=password].valid {
+     border-bottom: 1px solid $lime;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=password].invalid {
+     border-bottom: 1px solid $coral;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+
+.input-field input[type=email]:focus {
+     border-bottom: 1px solid $aqua;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=email].valid {
+     border-bottom: 1px solid $lime;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=email].invalid {
+     border-bottom: 1px solid $coral;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=password]:focus {
+     border-bottom: 1px solid $aqua;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=password].valid {
+     border-bottom: 1px solid $lime;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+.input-field input[type=password].invalid {
+     border-bottom: 1px solid $coral;
+     box-shadow: 0 1px 0 0 $light-grey;
+}
+
+//Collections
+.modal-content .collection {
+    color: $navy;
+    padding: 10px;
+
+}
+
+.modal-content .collection-item {
+    color: $aqua !important;
+}
+
+
+//Buttons
+//if using icons, keep to right
+.btn-large {
+	color: $white;
+}
+
+.btn{
+	color: $white;
+    background-color: $aqua;
+}
+
+.btn:hover{
+    color: $white;
+    background-color: $aqua;
+}
+
+button[type="submit"] {
+    background-color: $coral;
+    color: $white;
+}
+button[type="submit"]:hover {
+    background-color: $coral;
+    color: $white;
+}
+
+.waves-effect.waves-zavgreen .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: rgba(204, 214, 127, 0.99);
+    }
+.waves-effect.waves-zavcoral .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: rgba(242, 100, 50, 0.99);
+    }
+.waves-effect.waves-zavnavy .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: rgba(58, 98, 152, 0.99);
+    }
+.waves-effect.waves-zavaqua .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: $aqua;
+    }
+
+//Icons
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px;
+margin-top: 20px }
+
+
+//override colors
+
+.lime {
+  background-color: $lime;
+}
+.aqua {
+  background-color: $aqua;
+}
+.navy {
+  background-color: $navy;
+}
+.coral {
+  background-color: $coral;
+}
+.yellow {
+  background-color: $yellow;
+}
+.orange {
+  background-color: $orange;
+}
+.grey {
+  background-color: $grey;
+}
+.light-grey{
+  background-color: $light-grey;
+}
+
+//override text colors
+
+.lime-text {
+  color: $lime;
+}
+.aqua-text {
+  color: $aqua;
+}
+.navy-text {
+  color: $navy;
+}
+.coral-text {
+  color: $coral;
+}
+.yellow-text {
+  color: $yellow;
+}
+.orange-text {
+  color: $orange;
+}
+
+.white-text {
+  color: $white;
+}
+
+.uppercase {
+  text-transformation: uppercase;
+}
+
+
+
