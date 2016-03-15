@@ -62,6 +62,24 @@ a:hover {
   @include buttons(#fff, $lime, none, .65em 2em);
 }
 
+.button-small-coral-outline{
+  @include buttons(#fff, none, none, .65em 2em);
+  border: 3px solid $coral;
+  color: $really-dark-grey;
+}
+
+.button-small-aqua-outline{
+  @include buttons(#fff, none, none, .65em 2em);
+  border: 3px solid $aqua;
+  color: $really-dark-grey;
+}
+
+.button-small-lime-outline{
+  @include buttons(#fff, none, none, .65em 2em);
+  border: 3px solid $lime;
+  color: $really-dark-grey;
+}
+
 
  /////small buttons hover
 
@@ -91,6 +109,22 @@ a:hover {
   @include disabled-button($lime);
   color: #fff;
 }
+
+.button-small-aqua-outline:hover{
+  background: $aqua;
+  color: #fff;
+}
+
+.button-small-coral-outline:hover {
+  background: $coral;
+  color: #fff;
+}
+
+.button-small-lime-outline:hover {
+  background: $lime;
+  color: #fff;
+}
+
 
 ////medium buttons
 
@@ -162,6 +196,11 @@ a:hover {
 }
 
 
+//Bootstrap button customization
+.btn-info {
+  background-color: $yellow;
+  border-color: $yellow;
+}
 
 ////////////////////////////////////////
 

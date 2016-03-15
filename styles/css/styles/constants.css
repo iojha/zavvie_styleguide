@@ -1,3 +1,6 @@
+.clearfix {
+  clear: both; }
+
 h1 {
   font-size: 2.250em;
   font-weight: 500;
@@ -176,6 +179,31 @@ p {
   background: #F26432;
   width: 100%;
   padding: 20px 20px; }
+
+.error-box-heading {
+  background: #cb3e0d;
+  box-shadow: 5px 5px 5px #000;
+  width: 100%;
+  padding: 10px 20px; }
+  .error-box-heading h3 {
+    color: #fff; }
+
+.success-box {
+  background: #CCD67F;
+  width: 100%;
+  padding: 20px 20px;
+  color: #3B3B3B !important; }
+  .success-box h3 {
+    color: #3B3B3B; }
+
+.infobar {
+  background: #386099;
+  width: 100%;
+  padding: 5px 20px; }
+  .infobar p {
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: .85em; }
 
 hr {
   color: #EFEFEF;
@@ -378,6 +406,9 @@ button[type="submit"]:hover {
 
 .white-text {
   color: #FFFFFF; }
+
+.really-dark-grey-text {
+  color: #3B3B3B; }
 
 .uppercase {
   text-transformation: uppercase; }

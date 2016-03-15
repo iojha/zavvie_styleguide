@@ -13,6 +13,14 @@ $black: #171814;
 $white: #FFFFFF;
 $cream: #fbf4d9;
 
+$coral-dark: darken($coral, 15%);
+$coral-very-dark: darken($coral, 25%);
+
+$lime-dark: darken($lime, 15%);
+$lime-very-dark: darken($lime, 25%);
+
+$navy-dark: darken($navy, 15%);
+
 
 //Font
 $base-font-size: 16px;
@@ -38,9 +46,13 @@ $secondary_orange: $orange;
 $secondary_cream: $cream;
 
 
-// Padding and Margins
+
+// Padding and Margins and Clearing floats
 $banner-text-padding: 10px 15px;
 
+.clearfix {
+  clear: both;
+}
 
 // Fonts
 //// Ems are relative to the $base-font-size in body. So, for responsiveness, media queries need 
@@ -99,6 +111,7 @@ p{
   padding: $padding;
   margin-left: $margin-left;
   margin-right: $margin-right;
+//  border-bottom: 2px solid darken($background, 15%);
 }
 
 
@@ -202,6 +215,54 @@ p{
   width: 100%;
   padding: 20px 20px;
 }
+
+.error-box-heading {
+  background: $coral-dark;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 2px solid $coral-very-dark;
+  
+    h3{
+      color: #fff;
+  }
+}
+
+.success-box {
+  background: $lime;
+  width: 100%;
+  padding: 20px 20px;
+  color: $really-dark-grey !important;
+
+  h3 {
+    color: $really-dark-grey;
+  }
+}
+
+.success-box-heading {
+  background: $lime-dark;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 2px solid $lime-very-dark;
+    h3{
+      color: $really-dark-grey;
+  }
+}
+
+//Information bar or Infobar and tooltips
+
+.infobar {
+  background: $navy;
+  width: 100%;
+  padding: 5px 20px;
+  border-bottom: 2px solid $navy-dark;
+
+    p {
+    color: #fff;
+    font-size: .85em;
+    margin-bottom: 0;
+    }
+}
+
 
 //END -- ADDED BY IO
 
@@ -433,6 +494,10 @@ margin-top: 20px }
 
 .white-text {
   color: $white;
+}
+
+.really-dark-grey-text {
+  color: $really-dark-grey;
 }
 
 .uppercase {

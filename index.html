@@ -12,6 +12,22 @@
         padding: 50px 0;
     }
     
+    .navbar-inverse {
+        background: rgba(87, 195, 194, 0.9);
+        background-repeat: repeat-x;
+        border-right: 2px solid #5bbaae;
+        border-bottom: none;
+    }
+    
+    .navbar-inverse .navbar-nav>li>a {
+        color: #fff;
+    }
+    
+    .navbar-inverse .navbar-nav>li>a:hover {
+        border-bottom: 5px solid #f26432;
+        transition: 2s;
+    }
+    
     .border-box {
         background: #fff;
         border: 1px solid grey;
@@ -48,8 +64,13 @@
         padding-top: 20px;
     }
     
+    .margin-top {
+        margin-top: 20px;
+    }
+    
     .nav-container {
         background: #57C3C2;
+        border-right: 2px solid #5bbaae;
         color: #fff;
         padding-top: 40px;
         height: 100%;
@@ -62,6 +83,7 @@
     
     .nav>li>a {
         color: #fff;
+        font-size: 12px;
     }
     
     .nav>li>a:hover {
@@ -84,22 +106,86 @@
     i {
         padding: 2px 10px;
     }
+    /*SVG loader styles*/
+    
+    .loader {
+        margin: 0 0 2em;
+        height: 100px;
+        width: 20%;
+        text-align: center;
+        padding: 1em;
+        margin: 0 auto 1em;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #myModal {
+        background: #e2e2e2;
+    }
+    
+    .modal-header {
+        background: #F26432;
+        color: #fff;
+    }
+
+
+    /* Set the color of the loading icon */
+    
+    svg path,
+    svg rect {
+        animation: fill 4s infinite;
+    }
+    
+    @keyframes fill {
+        0% {
+            fill: #CCD67F;
+        }
+        30% {
+            fill: #F8D44B;
+        }
+        50% {
+            fill: #386099;
+        }
+        80% {
+            fill: #F26432;
+        }
+        100% {
+            fill: #CCD67F;
+        }
+    }
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control input-sm" placeholder="Search">
+                    <button class="btn btn-info btn-sm" type="button"><i class="fa fa-search"></i></button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign-up</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!--start container-->
     <div class="container-fluid">
         <!--Begin side bar-->
         <div class="col-xs-2 nav-container padding-top">
             <div class="col-xs-12">
-                <img class="brandimg" src="https://s3-us-west-2.amazonaws.com/stage-zavvie-static/bullseye_w.svg" width="150px">
+                <img class="brandimg" src="https://s3-us-west-2.amazonaws.com/stage-zavvie-static/bullseye_w.svg" width="130px">
             </div>
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#typography" style="clear:both"><i class="fa fa-paragraph"></i>Typography <span class="sr-only">(current)</span></a></li>
-                <li><a href="#button"><i class="fa fa-link"></i>Buttons/Links</a></li>
-                <li><a href="#errors"><i class="fa fa-thumbs-down"></i>Error/Success</a></li>
-            </ul>
+            <nav>
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#typography" style="clear:both"><i class="fa fa-paragraph"></i>Typography <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#button"><i class="fa fa-link"></i>Buttons/Links</a></li>
+                    <li><a href="#feedback"><i class="fa fa-comment"></i>Feedback</a></li>
+                </ul>
         </div>
         <!--End side bar-->
         <!--begin typography section-->
@@ -262,10 +348,6 @@ p{
                                         </ul>
                                     </li>
                                     <li><b>Links (hrefs)</b>: Use for cases where user actions won’t affect the website at all --when the user is just being moved around in the site, where they are basically just “clicking and viewing”.</li>
-                                    <li>All buttons darken by 10% on hover.</li>
-                                    <li>Use coral for all submits.</li>
-                                    <li>Use aqua for all others.</li>
-                                    <li>Use lime button for ??</li>
                                 </ul>
                             </p>
                         </div>
@@ -287,7 +369,12 @@ p{
                         <button class="button-small-coral" href="#">Primary action</button>
                         <button class="button-small-aqua" href="#">Secondary action</button>
                         <button class="button-small-lime" href="#">Tertiary action</button>
-                        <code></code>
+                        <hr>
+                        <h4 class="padding-top">Outline/subdued button</h4>
+                        <p>Use this when you need to emphasize the other action (eg -- use $coral button for signup and use subdued buttons for login)</p>
+                        <button class="button-small-coral-outline">Subdued button</button>
+                        <button class="button-small-aqua-outline">Subdued button</button>
+                        <button class="button-small-lime-outline">Subdued button</button>
                         <hr>
                         <h4 class="padding-top">Disabled State</h4>
                         <button disabled class="button-small-coral">Disabled button</button>
@@ -305,15 +392,66 @@ a:hover {
                     </div>
             </section>
             <!--End Buttons Section-->
-            <!--Begin Error/Success Message Section-->
-            <section id="error">
-                <div class="col-xs-12" id="errors">
-                    <h1 class="h1-aqua-banner">Errors</h1>
+            <!--Begin Icons Section-->
+            <section id="icons">
+                <div class="col-xs-12" id="icon">
+                    <h1 class="h1-aqua-banner">Icons</h1>
                     <div class="col-xs-10 col-xs-offset-1">
                         <div class="col-xs-12 border-box">
                             <h3 class="h3-aqua-banner-box">General Guidelines</h3>
                             <p>
                                 <ul>
+                                    <li>Use font awesome icons for all action icons. All font awesome icons should be white on colored background.</li>
+                                    <li>Loader svg should be spinning for anytime the site is loading.</li>
+                                    <li>Other icon styles will be determined once new framework is chosen but will be yellow color.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <h3 class="padding-top">Font Awesome for "action" icons or small icons</h3>
+                        <ul>
+                            <li><i class="fa fa-pencil"></i>Edit</li>
+                            <li><i class="fa fa-question-circle" data-toggle="tooltip" title="test123"></i>Information tool-tip</li>
+                            <li><i class="fa fa-user"></i>Dashboard</li>
+                            <li><i class="fa fa-list"></i>Posts</li>
+                            <li><i class="fa fa-home"></i>Homes</li>
+                            <li><i class="fa fa-map"></i>Neighborhoods</li>
+                            <li><i class="fa fa-cogs"></i>Settings</li>
+                            <li><i class="fa fa-chevron-left"></i>Back</li>
+                            <li><i class="fa fa-sign-out"></i>Logout</li>
+                        </ul>
+                    </div>
+                    <hr/>
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <h3>Loading Icon</h3>
+                        <div class="loader">
+                            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                                <!--house svg-->
+                                <svg id="house" width="20px" height="20px" x="9px" y="9px" viewBox="-15 -15 50 50" style="enable-background:new 0 0 40 40; fill: #000;" xml:space="preserve">
+                                    <path class="st0" d="M36.3,22.3h-3.7v12.6c0,0.4-0.4,0.7-0.8,0.7H14.9c-0.5,0-0.8-0.3-0.8-0.7V22.3h-3.7c-0.4-0.4-0.2-0.8,0.2-1.2
+          L22.8,9.5c0.4-0.4,0.8-0.4,1.2,0l4.9,4.6V10h3.7v7.8l3.6,3.4C36.5,21.5,36.7,22,36.3,22.3z" /></path>
+                                </svg>
+                                <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                                    <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.8s" repeatCount="indefinite" />
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End Icons Section-->
+            <!--Begin Error/Success Message Section-->
+            <section id="feedback">
+                <div class="col-xs-12" id="feedback">
+                    <h1 class="h1-aqua-banner">Feedback: Erros and Success Messages</h1>
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="col-xs-12 border-box">
+                            <h3 class="h3-aqua-banner-box">General Guidelines</h3>
+                            <p>
+                                <ul>
+                                    <li>Any action the user takes (action = button click), should give the user feedback on the status. Eg, submit -- "your form has been submitted".
+                                    </li>
                                     <li>All error messages should have $coral background with h3 heading and p text.
                                     </li>
                                     <li>All success messages should have $lime background with h3 heading and p text, with color being $really-dark-grey color. It's hard to read white on $lime background.</li>
@@ -322,30 +460,154 @@ a:hover {
                         </div>
                     </div>
                     <div class="col-xs-10 col-xs-offset-1">
-                    <h3 class="padding-top">Error</h3>
-                        <div class="error-box">
-                            <h3 class="h3-coral-banner">Oops -- H3 stating gist of the error</h3>
-                            <p class="p-coral-banner">Pargraph text describing the error, and ideally offering actions on what they can do.<br><br>
-                            Always provide action steps for the user to get through the error state.<br><br>
-
-                            <a href="#" class="pull-right" style="color: #fff; text-transform: uppercase; font-size: .75em; font-weight: bold;">Try Again</a>
+                        <h3 class="padding-top">Error</h3>
+                        <div class="error-box-heading">
+                            <h3>Oops - H3 stating gist of the error</h3>
                         </div>
-                        
-
+                        <div class="error-box">
+                            <p class="p-coral-banner">Pargraph text describing the error, and ideally offering actions on what they can do.
+                                <br> ***Always provide action steps for the user to get through the error state***
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <a href="#" class="pull-right" style="text-transform: uppercase; font-size: .75em; font-weight: bold;">Try Again</a>
+                        </div>
+                        <hr/>
+                        <h3 class="padding-top">Success</h3>
+                        <div class="success-box-heading">
+                            <h3>Yay -- H3 stating gist of the success</h3>
+                        </div>
+                        <div class="success-box">
+                            <p class="p-lime-banner">Pargraph text describing the success, and ideally offering actions on what they can do NEXT -- how they can continue their flow on the site -- what is their most likely next task? Provide a link to that.
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <a href="#" class="pull-right" style="text-transform: uppercase; font-size: .75em; font-weight: bold;">Go to posts</a>
+                        </div>
                     </div>
             </section>
-            <!--End div for 9 cols-->
+            <section id="infobars">
+                <div class="col-xs-12" id="infobar">
+                    <h1 class="h1-aqua-banner">Information bars</h1>
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="col-xs-12 border-box">
+                            <h3 class="h3-aqua-banner-box">General Guidelines</h3>
+                            <p>
+                                <ul>
+                                    <li>Use $navy background for all information bar backgrounds.
+                                    </li>
+                                    <li>Use class $infobar class for infobar background and font.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="infobar clearfix margin-top" style="margin-top: 20px;">
+                        <p><em>This is an example of an infobar</em></p>
+                    </div>
+                </div>
+            </section>
+            <section id="searchbars">
+                <div class="col-xs-12" id="searchbar">
+                    <h1 class="h1-aqua-banner">Search bar</h1>
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="col-xs-12 border-box">
+                            <h3 class="h3-aqua-banner-box">General Guidelines</h3>
+                            <p>
+                                <ul>
+                                    <li>User the searchbar class for all searchbars -- searchbar-nav, searchbar-medium, searchbar-large.
+                                    </li>
+                                    <li>All searchbars that are larger than 4 cols should have "search" button.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="padding-top">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3 class="padding-top">Full width search bar</h3>
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-xs-12">
+                                            <input type="text" class="form-control input-lg" placeholder="Enter address or city name" />
+                                            <span class="input-group-btn">
+                                        <button class="btn btn-info btn-lg" type="button">Search</button>
+                                    </span>
+                                        </div>
+                                    </div>
+                                    <h3 class="padding-top">Narrow search bar</h3>
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-xs-4">
+                                            <input type="text" class="form-control input-sm" placeholder="Enter address" />
+                                            <span class="input-group-btn">
+                                        <button class="btn btn-info btn-sm" type="button"><i class="fa fa-search"></i></button>
+                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <section id="modals">
+                    <div class="col-xs-12" id="modals">
+                        <h1 class="h1-aqua-banner">Modals</h1>
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <div class="col-xs-12 border-box">
+                                <h3 class="h3-aqua-banner-box">General Guidelines</h3>
+                                <p>
+                                    <ul>
+                                        <li>Modals pop up and the background should dim by 50% while faintly visible.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <br>
+                        
+                    <!-- Button HTML (to Trigger Modal) -->
+                    <a href="#myModal" role="button" class="btn btn-medium btn-primary" data-toggle="modal">Click to login</a>
+                    <!-- Modal HTML -->
+                    <div id="myModal" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Login</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h3>Login</h3>
+                                    <p class="text-warning">This is an example of a text.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="button-small-coral-outline" data-dismiss="modal">Close</button>
+                                    <button type="button" class="button-small-coral">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--End Container-->
-            </div>
-            <!-- Bootstrap Core JavaScript
+                </section>
+                <!--End div for 9 cols-->
+                </div>
+                <!--End Container-->
+                </div>
+                <!-- Bootstrap Core JavaScript
     ================================================== -->
-            <!-- Placed at the end of the document so the pages load faster -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-            <script>
-            window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/script>')
-            </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+                <!-- Placed at the end of the document so the pages load faster -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <script>
+                window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/script>')
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+                <script>
+                $(document).ready(function() {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+                </script>
 </body>
 
 </html>
